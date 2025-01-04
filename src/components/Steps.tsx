@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from 'react';
-import { Icons } from "./Icons";
-
 
 const Steps = () => {
 
@@ -18,7 +16,6 @@ const Steps = () => {
 
                 const isCurrent = pathname.endsWith(step.url);
                 const isCompleted = STEPS.slice(index + 1).some((step) => pathname.endsWith(step.url));
-                const Icon = Icons[`man${index + 1}`];
 
                 return (
                     <li key={step.name} className="relative overflow-hidden lg:flex-1">
@@ -36,7 +33,11 @@ const Steps = () => {
                                 index !== 0 ? "lg:pl-9" : "",
                             )}>
                                 <span className="flex-shrink-0">
-                                    <Icon
+                                    <Image
+                                        src={`/man${index + 1}.png`}
+                                        width={150}
+                                        height={150}
+                                        alt={step.name}
                                         className={cn(
                                             "flex w-20 h-20 object-contain items-center justify-center",
                                             {

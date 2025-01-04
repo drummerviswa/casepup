@@ -124,7 +124,7 @@ const HomePage = () => {
                                 height={1024}
                                 className="absolute w-20 -left-6 -bottom-6 select-none"
                             />
-                            <Phone img="/testimonials/1.jpg" className="w-64" />
+                            <Phone img="/gr.jpg" className="w-64" />
                         </div>
                     </div>
                 </Wrapper>
@@ -136,12 +136,12 @@ const HomePage = () => {
                         <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl sm:text-6xl">
                             What our{" "}
                             <span className="relative px-2">
-                                customers <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-primary" />
+                                customers <Icons.underline className="stroke-primary hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-rose-600" />
                             </span>{" "}
                             say
                         </h2>
                         <Image
-                            src="/cartoons/man-6.svg"
+                            src="/bitmoji/ride.png"
                             alt="snake"
                             width={1024}
                             height={1024}
@@ -240,7 +240,7 @@ const HomePage = () => {
 
                             <div className="relative h-80 md:h-full w-full md:justify-self-end max-w-sm rounded-xl bg-muted/5 lg:rounded-2xl">
                                 <Image
-                                    src="/girl.jpg"
+                                    src="/ambedkar-and-buddha.jpg"
                                     alt="girl"
                                     width={2048}
                                     height={2048}
@@ -249,7 +249,7 @@ const HomePage = () => {
                             </div>
 
                             <div className="col-span-1 w-full mx-auto max-w-xs">
-                                <Phone img="/new-girl.jpg" className="w-60" />
+                                <Phone img="/ambedkar-and-buddha1.png" className="w-60" />
                             </div>
                         </div>
                     </div>

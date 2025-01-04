@@ -89,7 +89,7 @@ const DashboardPage = async () => {
                                     Last week&apos;s revenue
                                 </CardDescription>
                                 <CardTitle className="text-4xl">
-                                    {formatPrice(lastWeekSum._sum.amount ?? 0)}
+                                    {formatPrice(lastWeekSum._sum.amount*100 ?? 0)}
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
@@ -99,7 +99,7 @@ const DashboardPage = async () => {
                             </CardContent>
                             <CardFooter>
                                 <Progress
-                                    value={((lastWeekSum._sum.amount ?? 0) * 100) / WEEKLY_GOAL}
+                                    value={WEEKLY_GOAL-((lastWeekSum._sum.amount ?? 0) )}
                                     className="w-full h-2"
                                 />
                             </CardFooter>
@@ -110,7 +110,7 @@ const DashboardPage = async () => {
                                     Last month&apos;s revenue
                                 </CardDescription>
                                 <CardTitle className="text-4xl">
-                                    {formatPrice(lastMonthSum._sum.amount ?? 0)}
+                                    {formatPrice(lastMonthSum._sum.amount*100 ?? 0)}
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
@@ -120,7 +120,7 @@ const DashboardPage = async () => {
                             </CardContent>
                             <CardFooter>
                                 <Progress
-                                    value={((lastMonthSum._sum.amount ?? 0) * 100) / MONTHLY_GOAL}
+                                    value={MONTHLY_GOAL-((lastMonthSum._sum.amount ?? 0)) }
                                     className="w-full h-2"
                                 />
                             </CardFooter>

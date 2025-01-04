@@ -7,8 +7,8 @@ type IconType = {
 export const Icons: IconType = {
     underline: (props: LucideProps) => (
         <svg {...props} width="357" height="35" viewBox="0 0 357 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 32.0063C3 32.0063 111.385 17.9468 181 18C249.842 18.0526 354 32.0063 354 32.0063" stroke="#2563EB" strokeWidth="5" strokeLinecap="round" />
-            <path d="M3 17.0063C3 17.0063 111.385 2.94683 181 3C249.842 3.05258 354 17.0063 354 17.0063" stroke="#2563EB" strokeOpacity="0.3" strokeWidth="5" strokeLinecap="round" />
+            <path d="M3 32.0063C3 32.0063 111.385 17.9468 181 18C249.842 18.0526 354 32.0063 354 32.0063" stroke="#f43f5e" strokeWidth="5" strokeLinecap="round" />
+            <path d="M3 17.0063C3 17.0063 111.385 2.94683 181 3C249.842 3.05258 354 17.0063 354 17.0063" stroke="#f43f5e" strokeOpacity="0.3" strokeWidth="5" strokeLinecap="round" />
         </svg>
     ),
     whatPeopleAreBuying: (props: LucideProps) => (
