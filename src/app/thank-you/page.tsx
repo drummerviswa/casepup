@@ -21,9 +21,9 @@ const ThankYouPage = async ({ searchParams }: Props) => {
 
     console.log("id", orderId);
 
-    if (!orderId || typeof orderId !== "string") {
-        return notFound();
-    };
+    // if (!id || typeof id !== "string") {
+    //     return notFound();
+    // };
 
     const order = await db.order.findFirst({
         where: {
@@ -41,7 +41,7 @@ const ThankYouPage = async ({ searchParams }: Props) => {
 
     return (
         <Suspense>
-            <ThankYou order={order} />
+            <ThankYou order={order!} />
         </Suspense>
     )
 };

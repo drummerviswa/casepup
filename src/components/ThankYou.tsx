@@ -120,7 +120,7 @@ const ThankYou = ({ order }: Props) => {
                             You made a great choice!
                         </h4>
                         <p className="mt-2 text-sm text-muted-foreground">
-                            Thank you for your order! We're thrilled that you've joined the ClickCase family. Your new phone case is on its way and we can't wait for you to enjoy it. Don't forget, we stand behind our products with a 5-year print guarantee. If you're not completely satisfied, we'll replace it for free.
+                            Thank you for your order! We're thrilled that you've joined the CasePup family. Your new phone case is on its way and we can't wait for you to enjoy it. Don't forget, we stand behind our products with a 5-year print guarantee. If you're not completely satisfied, we'll replace it for free.
                         </p>
                     </div>
                 </div>

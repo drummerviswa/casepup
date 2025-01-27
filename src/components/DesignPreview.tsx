@@ -96,7 +96,7 @@ const DesignPreview = ({ configuration }: Props) => {
                         description: "There was an error processing your order. Please try again later."
                     });
                 } else if (res.url) {
-                    const promise = () => new Promise((resolve) => setTimeout(() => resolve({ name: 'Clickcase' }), 2000));
+                    const promise = () => new Promise((resolve) => setTimeout(() => resolve({ name: 'CasePup' }), 2000));
                     router.push(res.url);
                     toast.promise(promise(), {
                         loading: "Redirecting you to the checkout page...",

@@ -112,7 +112,7 @@ export async function POST(req: Request) {
                 userId: null,
                 orderId: null,
             }
-
+            console.log("Session", session);
             if (!userId || !orderId) {
                 throw new Error('Invalid request metadata')
             }
@@ -121,36 +121,35 @@ export async function POST(req: Request) {
             const shippingAddress = session.shipping_details!.address
 
             const updatedOrder = await db.order.update({
-                where: {
-                    id: orderId,
-                },
+                where: { id: orderId },
                 data: {
                     isPaid: true,
                     shippingAddress: {
                         create: {
                             name: session.customer_details!.name!,
-                            city: shippingAddress!.city!,
-                            country: shippingAddress!.country!,
-                            postalCode: shippingAddress!.postal_code!,
-                            street: shippingAddress!.line1!,
-                            state: shippingAddress!.state,
+                            city: shippingAddress?.city || '',
+                            country: shippingAddress?.country || '',
+                            postalCode: shippingAddress?.postal_code || '',
+                            street: shippingAddress?.line1 || '',
+                            state: shippingAddress?.state || '',
                         },
                     },
                     billingAddress: {
                         create: {
                             name: session.customer_details!.name!,
-                            city: billingAddress!.city!,
-                            country: billingAddress!.country!,
-                            postalCode: billingAddress!.postal_code!,
-                            street: billingAddress!.line1!,
-                            state: billingAddress!.state,
+                            city: billingAddress?.city || '',
+                            country: billingAddress?.country || '',
+                            postalCode: billingAddress?.postal_code || '',
+                            street: billingAddress?.line1 || '',
+                            state: billingAddress?.state || '',
                         },
                     },
                 },
-            })
+            });
+            
 
             await resend.emails.send({
-                from: 'Clickcase <drummerviswa@gmail.com>',
+                from: 'CasePup <drummerviswa@gmail.com>',
                 to: [event.data.object.customer_details.email],
                 subject: 'Thanks for your order!',
                 react: OrderEmail({
@@ -171,7 +170,7 @@ export async function POST(req: Request) {
 
         return NextResponse.json({ result: event, ok: true })
     } catch (err) {
-        console.error(err)
+        console.error("Error:",err)
 
         return NextResponse.json(
             { message: 'Something went wrong', ok: false },

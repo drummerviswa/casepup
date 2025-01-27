@@ -28,6 +28,7 @@ const getPaymentStatus = async (orderId: string) => {
         if (!order) {
             throw new Error("Order not found.");
         }
+        console.log("Orders",order);
 
         if (order.isPaid) {
             return order;

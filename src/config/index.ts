@@ -23,10 +23,10 @@ export const BASE_PRICE = 120_00;
 
 export const SITE_CONFIG: Metadata = {
     title: {
-        default: "ClickCase | Your Custom Phone Case Maker",
-        template: `%s | ClickCase`,
+        default: "CasePup | Your Custom Phone Case Maker",
+        template: `%s | CasePup`,
     },
-    description: "ClickCase is a custom phone case maker that allows you to create your own phone case with your own design.",
+    description: "CasePup is a custom phone case maker that allows you to create your own phone case with your own design.",
     icons: {
         icon: [
             {
@@ -36,8 +36,8 @@ export const SITE_CONFIG: Metadata = {
         ],
     },
     openGraph: {
-        title: "ClickCase | Your Custom Phone Case Maker",
-        description: "ClickCase is a custom phone case maker that allows you to create your own phone case with your own design.",
+        title: "CasePup | Your Custom Phone Case Maker",
+        description: "CasePup is a custom phone case maker that allows you to create your own phone case with your own design.",
         images: [
             {
                 url: "/og-image.png",
@@ -46,14 +46,14 @@ export const SITE_CONFIG: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        creator: "@shreyassihasane",
-        title: "ClickCase - make your own phone case",
-        description: "ClickCase is a custom phone case maker that allows you to create your own phone case with your own design.",
+        creator: "@drummerviswa",
+        title: "CasePup - make your own phone case",
+        description: "CasePup is a custom phone case maker that allows you to create your own phone case with your own design.",
         images: [
             {
                 url: "/og-image.png",
             },
         ],
     },
-    metadataBase: new URL("https://clickcase.vercel.app"),
+    metadataBase: new URL("https://casepup.vercel.app"),
 };

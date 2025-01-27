@@ -88,14 +88,14 @@ const createCheckoutSession = async ({ configId }: { configId: string }) => {
             }],
         });
 
-        // // check if the currency is INR
-        // if (session.currency === "INR") {
-        //     session.shipping_address_collection = {
-        //         allowed_countries: ["IN"],
-        //     }
-        // } else {
-        //     session.billing_address_collection = "auto";
-        // }
+        // check if the currency is INR
+        if (session.currency === "INR") {
+            session.shipping_address_collection = {
+                allowed_countries: ["IN"],
+            }
+        } else {
+            session.billing_address_collection = "auto";
+        }
 
         return { url: session.url };
     } catch (error: any) {
