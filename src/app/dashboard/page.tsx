@@ -89,7 +89,7 @@ const DashboardPage = async () => {
                                     Last week&apos;s revenue
                                 </CardDescription>
                                 <CardTitle className="text-4xl">
-                                    {formatPrice(lastWeekSum._sum.amount*100 ?? 0)}
+                                    {formatPrice((lastWeekSum._sum.amount ?? 0) * 100)}
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
@@ -110,7 +110,7 @@ const DashboardPage = async () => {
                                     Last month&apos;s revenue
                                 </CardDescription>
                                 <CardTitle className="text-4xl">
-                                    {formatPrice(lastMonthSum._sum.amount*100 ?? 0)}
+                                    {formatPrice((lastMonthSum._sum.amount ?? 0) * 100)}
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
