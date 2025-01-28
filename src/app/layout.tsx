@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href={"../../public/logo.png"} sizes="any" />
+            </head>
             <body className={cn(
                 "min-h-screen bg-slate-50 text-slate-900 antialiased",
                 font.className
