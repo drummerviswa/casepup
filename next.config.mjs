@@ -8,6 +8,9 @@ const nextConfig = {
             },{
                 protocol: "https",
                 hostname: "vercel.app",
+            },{
+                protocol:"https",
+                hostname:"ufs.sh",
             }
         ],
         domains: ["vercel.app"]
