@@ -9,6 +9,9 @@
  
 CasePup is an innovative e-commerce platform specializing in custom phone cases. It empowers users to effortlessly select, personalize, and order phone cases, offering a seamless, intuitive, and highly personalized shopping experience. With premium designs, top-notch quality, and user-friendly tools, CasePup transforms the way you protect and showcase your device.
 
+![image](https://github.com/user-attachments/assets/cc98f049-bef4-4ee9-942d-67cd0ac42ae5)
+
+
 ## Features
 
 - **Customizable Phone Cases**: Users can choose from various models, materials, finishes, and colors to create their perfect phone case.
